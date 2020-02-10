@@ -1,0 +1,16 @@
+import random
+def random_int_list(start, stop, length):
+	if start < stop:
+		start, stop = (int(start), int(stop))
+	else:
+		start, stop = (int(stop), int(start))
+	if length:
+		length = int(abs(length))
+	else:
+		length = 0
+	random_list = []
+	for i in range(length):
+		random_list.append(random.randint(start, stop))
+	return random_list
+
+print(random_int_list(1,100,100))
